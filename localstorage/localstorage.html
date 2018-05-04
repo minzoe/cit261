@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="localStorage.css">
+    <script src="localstorage.js"></script>
+    <title>Local Storage</title>
+</head>
+
+<body>
+    <h1>Local Storage</h1>
+    <p>Local Storage is a Web Storage Object. Another Web Storage Object is Session Storage.</p>
+    <h2>Methods</h2>
+    <ul>
+        <li><strong>localStorage.key(n):</strong> Returns the name of the nth key in the storage
+            <ul>
+                <li><strong>Note:</strong> This method reads the keys like an array, so they start at 0</li>
+                <li><strong>Note:</strong> This method follows how the user inputed them into the storage, and can be unreliable, reccomended
+                    to not rely on it</li>
+            </ul>
+        </li>
+        <li><strong>localStorage.setItems(keyname, value):</strong> Adds that key to the storage, or update that key's value if it already exists
+            <ul>
+                <li><strong>Note:</strong> Can also be written as localstorage.keyname = value</li>
+            </ul>
+        </li>
+        <li><strong>localStorage.getItem(keyname):</strong> Returns the value of the specified key name
+            <ul>
+                <li><strong>Note:</strong> Can also be written as localstorage.keyname</li>
+            </ul>
+        </li>
+        <li><strong>localStorage.removeItem(keyname):</strong> Removes that key from the storage</li>
+        <li><strong>localStorage.clear():</strong> Empty all keys out of the storage</li>
+    </ul>
+    <h2>Personal Uses</h2>
+    <p>Personally I have used localStorage for saving the user on the computer, so that when I change pages on a web site I
+        can call the name still.</p>
+    <p>There are other ways to be able to store things, but for a only javascript website I find this the easiest.</p>
+    <h2>Practice</h2>
+
+    <label for="textInput">Input Key Name:</label>
+    <input type="text" id="textInput">
+    <label for='keyValue'>Input Value for Key:</label>
+    <input id="keyValue">
+    <p id="displayItem"></p>
+    <button id="setItem" onclick="setStorageItem()">Set Item</button>
+    <button id="getItem" onclick="getStorageItem()">Get Item</button>
+
+    <button id="removeItem" onclick="removeStorageItem()">Remove Item</button>
+    <button id="clear" onclick="clearStorage()">Clear Storage</button>
+    <br>
+    <br>
+    <label for="keyNumber">Input number:</label>
+    <input type="number" id="keyNumber">
+    <p id="displayKeyN"></p>
+    <button id="key" onclick="displayKey()">Display key(n)</button>
+</body>
+
+</html>
