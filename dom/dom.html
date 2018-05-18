@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="dom.css">
+    <script src="dom.js"></script>
+    <title>DOM Manipulation</title>
+</head>
+
+<body>
+    <h1>DOM Manipulation</h1>
+    <h2>Create Element</h2>
+    <p>document.createElement(element)</p>
+    <h2>Append Child</h2>
+    <p>document.appendChild(element)</p>
+    <h2>Insert Before</h2>
+    <p>node.insertBefore(newnode, existingnode)</p>
+    <h2>Remove Child</h2>
+    <p>node.removeChild(node)</p>
+    <h2>Insert Adjacent</h2>
+    <h3>Insert Adjacent Html</h3>
+    <p>element.insertAdjacentHTML(position, text)</p>
+    <h3>Insert Adjacent Element</h3>
+    <p>targetElement.insertAdjacentElement(position, element)</p>
+    <h3>Positions</h3>
+    <ul>
+        <li>'beforebegin': Before the element itself.</li>
+        <li>'afterbegin': Just inside the element, before its first child.</li>
+        <li>'beforeend': Just inside the element, after its last child.</li>
+        <li>'afterend': After the element itself.</li>
+    </ul>
+    <h2>Example 1</h2>
+    <p>var h3 = document.createElement('h3');</p>
+    <p>var text = document.createTextNode('Test Text')</p>
+    <p>var id = document.getElementById('showAnswer')</p>
+    <p>h3.appendChild(text)</p>
+    <p>id.insertBefore(id, id.childNode[0])</p>
+    <p>id.removeChild(id.childNodes[0]</p>
+
+    <button id="execute1" onclick="execute1()">Execute Code</button>
+    <button onclick="remove()">Remove Child</button>
+    <div id="showAnswer">
+        <p>Last Child</p>
+    </div>
+    <h2>Example 2</h2>
+    <button onclick="example2('beforebegin')">Before Begin</button>
+    <button onclick="example2('afterbegin')">After Begin</button>
+    <button onclick="example2('beforeend')">Before End</button>
+    <button onclick="example2('afterend')">After End</button>
+    <button onclick="insertHTML()">Insert HTML</button>
+    <div id="example2">
+        <p id="para">First Child</p>
+        <p>Last Child</p>
+    </div>
+</body>
+
+</html>
