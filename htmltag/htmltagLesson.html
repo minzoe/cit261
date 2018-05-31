@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="htmltagLesson.css">
+    <title>HTML Tags</title>
+</head>
+
+<body>
+    <h1>HTML Tags</h1>
+    <h2>Video</h2>
+    <h3>Format</h3>
+    <p>&lsaquo;video width="320" height="240" controls&rsaquo;<br> &lsaquo;source src="movie.mp4" type="video/mp4"&rsaquo;<br> &lsaquo;source src="movie.ogg" type="video/ogg"&rsaquo;<br> Your browser does not support the video tag.<br> &lsaquo;track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English"&rsaquo;<br> &lsaquo;track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian"&rsaquo;<br> &lsaquo;/video&rsaquo;
+    </p>
+    <h3>Video Types</h3>
+    <ul>
+        <li>MP4: type="video/mp4"</li>
+        <li>WebM: type="video/webm"</li>
+        <li>Ogg: type="video/ogg"</li>
+    </ul>
+    <h3>Optional Attributes</h3>
+    <ul>
+        <li>autoplay: autoplay</li>
+        <li>controls: controls</li>
+        <li>height: height="pixels"</li>
+        <li>width: width="pixels"</li>
+        <li>loop: loop</li>
+        <li>muted: muted</li>
+        <li>poster: poster="url"</li>
+        <li>preload: preload="auto|metadata|none"</li>
+        <li>src: src="url"</li>
+    </ul>
+    <h3>Notes</h3>
+    <ul>
+        <li>Tags new to HTML5</li>
+        <li>MP4 type works in all browsers. WebM and Ogg are limited to a few.</li>
+        <li>If you want to make sure the video will load for different browsers have mulitple sources.</li>
+        <li>Video must be a file and not a link. Youtube does not work.</li>
+        <li>Any text in the video tag will be displayed if browser does not support video tag.</li>
+        <li>Can use javascript to create user interaction. Example: controls to change play/pause, controls to change width.</li>
+    </ul>
+    <h2>Audio</h2>
+    <h3>Format</h3>
+    <p>&lsaquo;audio controls&rsaquo;<br> &lsaquo;source src="horse.ogg" type="audio/ogg"&rsaquo;<br> &lsaquo;source src="horse.mp3" type="audio/mpeg"&rsaquo;<br> Your browser does not support the audio element.<br> &lsaquo;/audio&rsaquo;
+    </p>
+    <h3>Types</h3>
+    <ul>
+        <li>MP3: type="audio/mpeg"</li>
+        <li>Ogg: type="audio/ogg"</li>
+        <li>Wav: type="audio/wav"</li>
+    </ul>
+    <h3>Optional Attributes</h3>
+    <ul>
+        <li>autoplay: autoplay</li>
+        <li>loop: loop</li>
+        <li>muted: muted</li>
+        <li>preload: preload="auto|metadata|none"</li>
+        <li>src: src="url"</li>
+    </ul>
+    <h3>Notes</h3>
+    <ul>
+        <li>Controls attribute is neccesary.</li>
+        <li>MP3 is supported on all browsers. Wav is on most, and Ogg is on only a few.</li>
+    </ul>
+    <h2>Track</h2>
+    <h3>Optional Attributes</h3>
+    <ul>
+        <li>default: default</li>
+        <li>kind: kind="captions|chapters|descriptions|metadata|subtitles"</li>
+        <li>label: label="text"</li>
+        <li>src: src="url"</li>
+        <li>srclang: srclang="lang_code"</li>
+    </ul>
+    <h2>Canvas</h2>
+    <h3>Format</h3>
+    <p>&lsaquo;canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;"&rsaquo;<br> Your browser does not support the canvas element.<br> &lsaquo;/canvas&rsaquo;
+    </p>
+    <h3>Notes</h3>
+    <ul>
+        <li>Canvas has no drawing capabilities of itself. Anything is done using javascript.</li>
+    </ul>
+    <a href="https://www.w3schools.com/graphics/canvas_reference.asp">W3schools Canvas Refernce</a>
+</body>
+
+</html>
