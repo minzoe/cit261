@@ -14,12 +14,16 @@ button {
     width: 100px;
     height: 100px;
     background: red;
-    -webkit-transition: width 2s;
-    transition: width 2s;
+    transition-property: width, height, color;
+    transition-duration: 5s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
 }
 
 #square:hover {
     width: 300px;
+    height: 400px;
+    background-color: green;
 }
 
 #circle {
