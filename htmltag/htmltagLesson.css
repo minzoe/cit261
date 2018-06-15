@@ -3,3 +3,12 @@ body {
     margin: 1em;
     margin-bottom: 150px;
 }
+
+
+button {
+    width: 150px;
+    margin: 0.5em;
+    background-color: lightblue;
+    display: block;
+    border-radius: 10px;
+}
