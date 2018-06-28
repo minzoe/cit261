@@ -69,5 +69,6 @@ touchSquare.addEventListener('touchmove', function (e) {
 // touchcancel
 
 function touchColorChange(swatch) {
-    touchSquare.style.backgroundColor = 'silver';
+    alert('On touch');
+    touchSquare.style.backgroundColor = swatch;
 }
