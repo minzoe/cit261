@@ -66,8 +66,7 @@ touchSquare.addEventListener('touchend', function () {
 // ontouchmove
 touchSquare.addEventListener('touchmove', function (e) {
     var curX = e.touches[0].pageX;
-    var d = curX - startX;
-    touchSquare.style.marginLeft = d;
+    touchSquare.style.marginLeft = curX + "px";
 })
 
 // touchcancel
