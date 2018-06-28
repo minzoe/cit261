@@ -54,10 +54,14 @@ function showOnload() {
 // Mobile Event
 var touchSquare = document.getElementById('touchSquare');
 // ontouchstart
-touchSquare.addEventListener('touchstart', touchColorChange('silver'));
+touchSquare.addEventListener('touchstart', function () {
+    touchSquare.style.backgroundColor = "silver";
+});
 
 // on touchend
-touchSquare.addEventListener('touchend', touchColorChange('black'));
+touchSquare.addEventListener('touchend', function () {
+    touchSquare.style.backgroundColor = "black";
+});
 
 // ontouchmove
 touchSquare.addEventListener('touchmove', function (e) {
