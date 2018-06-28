@@ -66,10 +66,13 @@ touchSquare.addEventListener('touchend', function () {
 // ontouchmove
 touchSquare.addEventListener('touchmove', function (e) {
     var curX = e.touches[0].pageX;
-    touchSquare.style.marginLeft = curX + "px";
+    touchSquare.style.marginLeft = (curX - 50) + "px";
 })
 
 // touchcancel
+touchSquare.addEventListener('touchcancel', function () {
+    document.getElementById('touchCancel').innerHTML = "Touch was cancelled";
+})
 
 function touchColorChange(swatch) {
     alert('On touch');
