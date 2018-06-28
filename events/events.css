@@ -1,0 +1,23 @@
+body {
+    font-size: 18px;
+    margin: 1em;
+    margin-bottom: 150px;
+}
+
+button {
+    width: 150px;
+    margin: 0.5em;
+    background-color: lightblue;
+}
+
+#square {
+    height: 100px;
+    width: 100px;
+    background-color: cadetblue;
+}
+
+#touchSquare {
+    height: 100px;
+    width: 100px;
+    background-color: sienna;
+}

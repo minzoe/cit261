@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="events.css" type="text/css" rel="stylesheet">
+    <title>CIT 261</title>
+</head>
+
+<body onload="showOnload()">
+    <h1>Javascript events</h1>
+    <p id="message">Event Message</p>
+    <h2>Onload</h2>
+    <p>Alert was called</p>
+    <h2>OnChange</h2>
+    <input type="checkbox" onchange="showOnchange()">
+    <h2>OnClick</h2>
+    <button id="onclickBtn">Trigger</button>
+    <h2>OnKey</h2>
+    <input id="onkey">
+    <h2>OnMouse</h2>
+    <div id="square"></div>
+    <h2>OnTouch</h2>
+    <div id="touchSquare"></div>
+    <p id="touchCancel"></p>
+</body>
+<script src="events.js"></script>
+
+</html>
