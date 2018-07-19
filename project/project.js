@@ -73,16 +73,20 @@ function resetMessage() {
 
 function loadPage() {
     var json = JSON.parse(localStorage.getItem('setPrevious'));
-    if (typeof json.city != 'string') {
+    if (json == null || json == undefined) {
 
     } else {
-        apiCall(json.city);
-    }
+        if (typeof json.city != 'string' || json.city == "") {
 
-    if (typeof json.message != 'string') {
+        } else {
+            apiCall(json.city);
+        }
 
-    } else {
-        document.getElementById('personal').innerHTML = json.message;
+        if (typeof json.message != 'string' || json.message == "") {
+
+        } else {
+            document.getElementById('personal').innerHTML = json.message;
+        }
     }
 }
 
