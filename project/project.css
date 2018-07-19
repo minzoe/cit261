@@ -1,0 +1,259 @@
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+#weather-div {
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: relative;
+    margin: auto;
+}
+
+main {
+    margin: auto;
+    text-align: center;
+    margin-top: 80px;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.rain span :nth-child(2) {
+    background: black;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, black 100%);
+    height: 20px;
+    position: absolute;
+    width: 2px;
+    animation-name: raindrop;
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    left: 50px;
+    opacity: 0.01;
+    top: 0;
+}
+
+.rain span :nth-child(3) {
+    content: "";
+    background: black;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, black 100%);
+    height: 20px;
+    position: absolute;
+    width: 2px;
+    animation-name: raindrop-after;
+    animation-delay: 0.1s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    left: 60px;
+    opacity: 0.01;
+    top: 0;
+}
+
+.rain span :nth-child(1) {
+    content: "";
+    background: black;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, black 100%);
+    height: 20px;
+    position: absolute;
+    width: 2px;
+    animation-name: raindrop-before;
+    animation-delay: 0.1s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    left: 40px;
+    opacity: 0.01;
+    top: 0;
+}
+
+@keyframes raindrop {
+    0% {
+        left: 50px;
+        opacity: 0.1;
+        top: 0;
+    }
+    90% {
+        left: 50px;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 80px;
+    }
+}
+
+@keyframes raindrop-before {
+    0% {
+        left: 40px;
+        opacity: 0.1;
+        top: 0;
+    }
+    90% {
+        left: 40px;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 80px;
+    }
+}
+
+@keyframes raindrop-after {
+    0% {
+        left: 60px;
+        opacity: 0.1;
+        top: 0;
+    }
+    90% {
+        left: 60px;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 80px;
+    }
+}
+
+.sun span :nth-child(2) {
+    display: block;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.sun span :nth-child(1),
+.sun span :nth-child(3) {
+    display: block;
+    position: relative;
+    left: 50px;
+    top: 60px;
+    width: 2px;
+    height: 70px;
+    background-color: orange;
+    transition: transform 1s linear;
+    transform-style: preserve-3D;
+    z-index: -1;
+}
+
+.sun span :nth-child(3),
+.sun span :nth-child(3)::before,
+.sun span :nth-child(3)::after {
+    height: 2px;
+    width: 70px;
+    left: 15px;
+    top: -25px;
+}
+
+.sun span :nth-child(3)::before {
+    content: "";
+    transform: rotate(30deg);
+    position: absolute;
+    background-color: orange;
+    left: 1px;
+    top: 0px;
+}
+
+.sun span :nth-child(3)::after {
+    content: "";
+    transform: rotate(-30deg);
+    position: absolute;
+    background-color: orange;
+    left: 1px;
+    top: 0px;
+}
+
+.sun span :nth-child(1),
+.sun span :nth-child(1)::before,
+.sun span :nth-child(1)::after {
+    height: 70px;
+    width: 2px;
+}
+
+.sun span :nth-child(1)::before {
+    content: "";
+    transform: rotate(30deg);
+    position: absolute;
+    background-color: orange;
+    left: 1px;
+    top: 0px;
+}
+
+.sun span :nth-child(1)::after {
+    content: "";
+    transform: rotate(-30deg);
+    position: absolute;
+    background-color: orange;
+    left: 1px;
+    top: 0px;
+}
+
+.sun:hover span :nth-child(1),
+.sun:hover span :nth-child(3) {
+    transform: rotate(360deg);
+}
+
+.cloud span span {
+    width: 100px;
+    height: 40px;
+    background: lightblue;
+    border-radius: 100px;
+    position: absolute;
+    top: 20px;
+}
+.cloud:hover {
+    transform: scale(0.75, 0.75);
+}
+
+.cloud span span:nth-child(2) {
+    position: absolute;
+    left: -50px;
+    top: 50px;
+}
+
+.cloud span span:nth-child(3) {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+.cloud span span:after,
+.cloud span span:before {
+    content: '';
+    position: absolute;
+    background: lightblue;
+    z-index: -1
+}
+
+.cloud span span:after {
+    width: 50px;
+    height: 50px;
+    top: -20px;
+    left: 35px;
+    border-radius: 100px;
+}
+
+.cloud span span:before {
+    width: 30px;
+    height: 30px;
+    top: -10px;
+    right: 55px;
+    border-radius: 200px;

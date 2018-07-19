@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project</title>
+    <link href="project.css" type="text/css" rel="stylesheet">
+</head>
+
+<body id="body" onload="loadPage()">
+    <header>
+        <h1 id="city">City</h1>
+        <h2 id="weather">Weather</h2>
+        <div id="weather-div">
+                <span id="weather-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+        </div>
+    </header>
+    <main>
+        <span id="message"></span>
+        <input type="text" id="zipCode" placeholder="12345">
+        <button onclick="searchByCode()">Search</button>
+    </main>
+    <footer>
+        <span id="personal">Write your own message</span>
+        <button onclick="writeMessage()">Write Message</button>
+    </footer>
+</body>
+<script src="project.js"></script>
+
+</html>
